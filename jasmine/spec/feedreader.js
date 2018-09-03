@@ -32,7 +32,7 @@ $(function() {
          * and that the URL is not empty.
          */
 
-         it('url defined', function()) {
+         it('contain URLS', function()) {
            for(let feed of allFeeds) {
              expect(feed.url).toBeDefined();
              expect(feed.url.length).not.toBe(0);
@@ -57,7 +57,7 @@ describe ('The menu', function() {
          * hiding/showing of the menu element.
          */
 it ('is hidden', function() {
-  const body = document.querySelector('body');
+  LET body = document.querySelector('body');
   expect(body.classList.contains('menu-hidden')).toBe(true);
 });
 
@@ -97,8 +97,8 @@ it ('is hidden', function() {
 
   /* TODO: Write a new test suite named "New Feed Selection" */
   describe('New Feed Selection', function() {
-      const feed = document.querySelector('.feed');
-      const firstFeed = [];
+      let feed = document.querySelector('.feed');
+      let firstFeed = [];
       /* TODO: Write a test that ensures when a new feed is loaded
        * by the loadFeed function that the content actually changes.
        * Remember, loadFeed() is asynchronous.
